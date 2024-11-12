@@ -38,10 +38,9 @@ async function sendMessageToAssistant(userInput, sessionId) {
     const runsURL = `https://api.openai.com/v1/threads/${threadId}/runs`;
     const runResponse = await axios.post(runsURL, {
       assistant_id: assistantId,
-      instructions: "Answer the question strictly based on the information in the provided files or vector data. Avoid using general knowledge, and provide accurate, document-based answers.",
-      // instructions:"Mustn't use any general knowledge. Must Only respond based on the files or vector data provided.",
-      temperature: 0.2,
-      top_p: 0.8
+      instructions:"Mustn't use any general knowledge. Must Only respond based on the files or vector data provided.",
+      temperature: 0.1,
+      top_p: 0.9
     }, { headers });
     const runId = runResponse.data.id;
 

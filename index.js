@@ -22,7 +22,6 @@ app.use(express.json());
 // connectToMongoDB();
 // listFiles();
 
-
 const assistantId = 'asst_ItNNqhVEJOXkiODy0PlNGG6J';
 
 const userConversation = [];
